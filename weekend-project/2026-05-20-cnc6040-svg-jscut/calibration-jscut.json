@@ -1,0 +1,39 @@
+{
+    "svg": {
+        "pxPerInch": "96"
+    },
+    "material": {
+        "units": "mm",
+        "thickness": "20",
+        "zOrigin": "Bottom",
+        "clearance": "5"
+    },
+    "curveToLineConversion": {
+        "minNumSegments": "1",
+        "minSegmentLength": 0.254
+    },
+    "tool": {
+        "units": "mm",
+        "diameter": "3",
+        "angle": 180,
+        "passDepth": "0.25",
+        "stepover": "0.2",
+        "rapidRate": "900",
+        "plungeRate": "30",
+        "cutRate": "80"
+    },
+    "operations": {
+        "operations": []
+    },
+    "tabs": {
+        "units": "mm",
+        "maxCutDepth": "0",
+        "tabs": []
+    },
+    "gcodeConversion": {
+        "units": "mm",
+        "gcodeFilename": "gcode.gcode",
+        "offsetX": "-5",
+        "offsetY": "-5"
+    }
+}

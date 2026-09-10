@@ -1,0 +1,17 @@
+name: CI/CD Default Pipeline
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - name: Verify LFS pointers integrity
+        run: |
+          git lfs fsck --objects
