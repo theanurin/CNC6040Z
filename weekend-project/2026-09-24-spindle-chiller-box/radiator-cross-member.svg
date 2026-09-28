@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="236mm"
+    height="134mm"
+    viewBox="-5 -5 236 134"
+    fill="none" stroke="black" stroke-width="1"
+>
+    <path d="M 0 0 L 0 124 L 226 124 L 226 0 L 0 0 Z" />
+    <path d="M 35 18 A 13 13 0 1 0 61 18 A 13 13 0 1 0 35 18 Z" />
+</svg>
