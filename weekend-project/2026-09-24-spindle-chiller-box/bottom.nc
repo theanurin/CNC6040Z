@@ -9,6 +9,8 @@ G1 Z25 F1800      ; Move to clearance level
 ; Cartesian Work Area: (+, +)
 ;
 
+M3 S12000   (turn on spindle)
+
 ;
 ; Operation:    0
 ; Name:         
@@ -20,8 +22,6 @@ G1 Z25 F1800      ; Move to clearance level
 ; Plunge rate:  60
 ; Cut rate:     300
 ;
-
-M3 S12000   (turn on spindle)
 
 ; Path 0
 ; Rapid to initial position

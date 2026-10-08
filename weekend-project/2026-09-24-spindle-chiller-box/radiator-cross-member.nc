@@ -3,11 +3,13 @@ G90         ; Absolute positioning
 G1 Z25 F1800      ; Move to clearance level
 
 ;
-; Tool: End-mill 3mm
+; Tool: End-mill 4mm
 ; Clearance: 25mm
-; Final size: 226x124mm
+; Final size: 224x122mm
 ; Cartesian Work Area: (+, +)
 ;
+
+M3 S12000   (turn on spindle)
 
 ;
 ; Operation:    0
@@ -20,8 +22,6 @@ G1 Z25 F1800      ; Move to clearance level
 ; Plunge rate:  60
 ; Cut rate:     300
 ;
-
-M3 S12000   (turn on spindle)
 
 ; Path 0
 ; Rapid to initial position

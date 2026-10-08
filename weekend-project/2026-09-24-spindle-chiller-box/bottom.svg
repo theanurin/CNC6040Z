@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="236mm"
-    height="404mm"
-    viewBox="-5 -5 236 404"
+    width="234mm"
+    height="402mm"
+    viewBox="-5 -5 234 402"
     fill="none" stroke="black" stroke-width="0.1"
 >
-    <path d="M 0 0 L 0 394 L 226 394 L 226 0 L 0 0 Z" />
+    <path d="M 0 0 L 0 392 L 224 392 L 224 0 L 0 0 Z" />
 </svg>

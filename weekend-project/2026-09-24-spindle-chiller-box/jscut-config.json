@@ -14,13 +14,13 @@
     },
     "tool": {
         "units": "mm",
-        "diameter": "3",
+        "diameter": "4",
         "angle": 180,
         "passDepth": "2",
-        "stepover": "0.2",
-        "rapidRate": "1800",
-        "plungeRate": "60",
-        "cutRate": "300"
+        "stepover": "0.5",
+        "rapidRate": "900",
+        "plungeRate": "240",
+        "cutRate": "900"
     },
     "operations": {
         "operations": []
