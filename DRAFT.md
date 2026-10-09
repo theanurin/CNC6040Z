@@ -70,3 +70,16 @@ GDZ 80-1.5-188 з водяним охолодженням 1.5 кВт ER11
 - M03: Включає обертання шпинделя за годинниковою стрілкою.
 - M04: Включає обертання шпинделя проти годинникової стрілки.
 - M05: Зупиняє обертання шпинделя.
+
+## Програмне забезпечення
+
+- PCI\VEN_10EC&DEV_8136&SUBSYS_81361849&REV_05
+- PCI\VEN_1106&DEV_7122&SUBSYS_71221849&REV_00 - VIA Technologies Chrome9 HD IGP 
+
+### Інсталяція Syncthing
+
+- Качаємо, останню працюючу на Windows XP, версію `syncthing-windows-386-v1.0.1.zip`
+- Розпаковуємо в `C:\Program Files\Syncthing\`
+- Налаштовуємо автозапуск
+  - Win + R, `regedit`, Enter
+  - Створюємо рядковий параметр в `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`: `"C:\Program Files\Syncthing\syncthing.exe" --no-console --no-browser`
