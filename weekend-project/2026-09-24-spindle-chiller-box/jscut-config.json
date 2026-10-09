@@ -18,7 +18,7 @@
         "angle": 180,
         "passDepth": "2",
         "stepover": "0.5",
-        "rapidRate": "900",
+        "rapidRate": "1800",
         "plungeRate": "240",
         "cutRate": "900"
     },
