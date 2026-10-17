@@ -3,7 +3,6 @@
 #9703 = 1.25    (depth per cycle, should be multiple to #4)
 #9704 = 10      (depth Z)
 #9707 = 12000   (spindle speed)
-#9708 = 300     (inset feed)
 #9709 = 900     (drilling feed)
 
 ; preamble
@@ -11,9 +10,9 @@ G21                                             (mm)
 G91                                             (switch to incremental coordinates)
 
 ; launch spindle
-G1 Z2 F[0 + #9708]                             (up to 2 by Z to launch spindle)
+G1 Z2 F80                             (up to 2 by Z to launch spindle)
 M3 S[0 + #9707]                                (turn on spindle)
-G1 Z-2 F[0 + #9708]                            (restore Z-zero position)
+G1 Z-2 F80                            (restore Z-zero position)
 
 ; execute sub-program few times
 M98 P9700
@@ -32,8 +31,7 @@ O9700 (sub-program)
 ; #9702 (end-mill diameter, should be lower of equal to #9701)
 ; #9703 (depth per cycle, should be multiple to #9704))
 ; #9704 (depth Z)
-; #9708 (inset feed)
-; #9709 (drilling feed)
+; #9709 (helix-drilling feed)
 ;
 
 G0 Z2
@@ -41,7 +39,7 @@ G0 X[[#9701 - #9702] / 2] Y0
 G0 Z-2
 M98 P9701 L[#9704 / #9703]                                                    (call sub-program few times)
 G3 X0 Y0 I[0 - [[#9701 - #9702] / 2]] J0 F[0 + #9709]                       (360 by circle without Z inset)
-G0 Z[[#9704 / #9703] * #9703] F[0 + #9708]                                (go to original Z position)
+G0 Z[[#9704 / #9703] * #9703] F80                                           (go to original Z position)
 G0 Z2
 G0 X[0 - [[#9701 - #9702] / 2]] Y0
 G0 Z-2
