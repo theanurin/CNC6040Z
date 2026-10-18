@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.gcode": "gcode",
+        "*.nc": "gcode",
+        "*.tap": "gcode",
+    },
+    "[gcode]": {
+        "editor.colorDecorators": false,
+        "files.encoding": "iso88591",
+        // Not used; superseded by .editorconfig. Kept as a reminder.
+        "files.eol": "\r\n"
+    },
+}
