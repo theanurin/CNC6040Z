@@ -1,0 +1,8 @@
+root = true
+
+[*.gcode]
+end_of_line = crlf
+[*.nc]
+end_of_line = crlf
+[*.tap]
+end_of_line = crlf
