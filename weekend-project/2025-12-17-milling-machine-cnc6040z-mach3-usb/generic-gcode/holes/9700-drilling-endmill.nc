@@ -1,12 +1,12 @@
-#9701 = 10      (drilling diameter)
-#9702 = 6       (end-mill tool diameter, should be lower of equal to #1)
-#9703 = 1.25    (depth per cycle, should be multiple to #4)
-#9704 = 10      (depth Z)
-#9707 = 12000   (spindle speed)
-#9709 = 900     (drilling feed)
+#9701 = 10      ; drilling diameter
+#9702 = 6       ; end-mill tool diameter, should be lower of equal to #1
+#9703 = 1.25    ; depth per cycle, should be multiple to #4
+#9704 = 10      ; depth Z
+#9707 = 12000   ; spindle speed
+#9709 = 900     ; drilling feed
 
 ; preamble
-G21                         (mm)
+G21                         ; mm
 
 ; launch spindle
 G91                         (switch to incremental coordinates)
@@ -36,18 +36,15 @@ G91                                                                             
 G0 Z2
 G0 X[[#9701 - #9702] / 2] Y0                                                    ; go left to start position
 G0 Z-2
-M98 P9701 L[#9704 / #9703]                                                      ; call helical interpolation few times
+M98 P9701 L[#9704 / #9703]                                                      ; call helical interpolation few times to cover Z depth
 G3 X0 Y0 I[0 - [[#9701 - #9702] / 2]] J0 F[0 + #9709]                           ; 360 by circle without Z inset
 G0 Z[[#9704 / #9703] * #9703]                                                   ; go to original Z position
 G0 Z2
-G0 X[0 - [[#9701 - #9702] / 2]] Y0
+G0 X[0 - [[#9701 - #9702] / 2]] Y0                                              ; restore X original position
 G0 Z-2
 G90                                                                             ; switch to absolute coordinates
-; return from sub-program
-M99
+M99                                                                             ; return from sub-program
 ;
-O9701
-; Make one round of circle using helical interpolation
+O9701                                                                           ; Make one round of circle using helical interpolation
 G3 X0 Y0 Z[0 - #9703] I[0 - [[#9701 - #9702] / 2]] J0 F[0 + #9709]              ; helical interpolation
-; return from sub-program
-M99
+M99                                                                             ; return from sub-program
