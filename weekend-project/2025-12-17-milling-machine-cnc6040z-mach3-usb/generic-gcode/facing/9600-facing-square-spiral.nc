@@ -7,7 +7,7 @@
 #9602=16   ; total facing length in Y
 #9603=0.25 ; step over
 #9604=0.2  ; depth Z
-#9609=360  ; facing feed (4F/6mm endmill for S6000)
+#9609=360  ; facing feed (steel: 4F/6mm endmill for S6000)
 
 ;
 G17 G54 G40 G49 G80 G90 G94
@@ -41,7 +41,7 @@ O9600
 ; #9602 - total facing length in Y
 ; #9603 - step over
 ; #9604 - depth Z
-; #9609 - feedrate
+; #9609 - facing feed
 ;
 G91                                                                             ; switch to incremental coordinates
 G01 Z[0 - #9604] F[#9609/6]                                                     ; Go down to depth Z
