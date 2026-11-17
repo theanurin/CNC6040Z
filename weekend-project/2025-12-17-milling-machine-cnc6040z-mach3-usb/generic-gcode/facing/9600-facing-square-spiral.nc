@@ -1,5 +1,5 @@
 ;
-; Working Z: Z -> Z - #9604
+; Working Z: Z -> Z - [#9604 * #9600]
 ; Use End Mill
 ;
 
@@ -9,7 +9,11 @@
 #9603=0.25 ; step over
 #9604=0.25 ; depth Z
 #9605=540  ; facing feed (steel: 4F/6mm endmill for S6000)
-
+;
+;
+; TODO: Improve to calc dynamically [#9607 - 10], [#9607 - 8], [#9607 - 6], [#9607 - 4]
+;
+;
 ;
 G17 G54 G40 G49 G80 G90 G94
 G21
@@ -34,8 +38,8 @@ M05
 G17 G54 G90 G80 G40
 (bye-bye)
 M02
-
-
+;
+;
 O9600
 ;
 ; Round Facing/Pocket by End Mill
